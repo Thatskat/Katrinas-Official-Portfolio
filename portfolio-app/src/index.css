@@ -234,12 +234,8 @@ footer .smallText {
   color: var(--primary-green);
 }
 
-.projectSection .projectCard span .tag {
-  font-size: 1.3rem;
-}
 .projectSection .projectCard span p {
  display: inline;
- margin: 1rem;
 }
 .projectSection .projectCard span p span:hover {
   text-decoration: underline;
