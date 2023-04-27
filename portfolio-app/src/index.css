@@ -1,0 +1,289 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  /* COLOURINGS */
+  --primary-green: #687351;
+  --secondary-green: #9ba17f;
+  --primary: #e8e4db;
+  --brand: #c9c1ae;
+  --black: #27272a;
+  /* DARK MODE */
+  --darkPrimary: #171717;
+  /* FONTS */
+  --main: 'Karla', sans-serif;
+}
+
+/* BALL CSS */
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  z-index: 0;
+}
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  text-transform: lowercase;
+  background: var(--primary) !important;
+  font-family: var(--main);
+}
+#dark .pageBackground {
+  background: var(--black);
+  height: 100vh;
+}
+/* GRID CSS */
+.grid-container {
+  display: flex;
+}
+.grid-container .gridItem {
+  width: 70%;
+}
+.grid-container .gridItemImage {
+  margin-top: 4rem;
+}
+.grid-container .gridItemImage img {
+  width: 20rem;
+}
+/* FONTS */
+h1 {
+  font-size: 3.052rem;
+}
+h2 {
+  font-size: 2.441rem;
+}
+.subHeading {
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+}
+/* CSS REUSABLE CLASSES */
+.hidden {
+  display: none;
+}
+
+/* NAVBAR */
+nav {
+  text-align: center;
+  padding: 2rem;
+  z-index: 2 !important;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+#light nav {
+  background-color: var(--brand);
+}
+#dark nav {
+  background-color: var(--darkPrimary);
+}
+nav .navLinks {
+  margin-right: 3rem;
+}
+nav button {
+  padding:  0.3rem 1rem 0rem  2rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+#light nav button, #light nav .theme-toggle {
+  color: var(--darkPrimary);
+}
+
+#dark nav button, #dark nav .theme-toggle {
+  color: var(--brand);
+}
+
+nav .theme-toggle {
+  float: left;
+  font-size: 2rem;
+  margin-top: -0.9rem;
+  padding: 0;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 0.5rem;
+}
+#light footer {
+  color: var(--darkPrimary);
+  background-color: var(--brand);
+}
+#dark footer {
+  color: var(--brand);
+  background-color: var(--darkPrimary);
+}
+footer .inline a {
+  font-size: 2.5rem;
+  padding: 0.2rem;
+}
+
+#light footer .inline a {
+  color: var(--darkPrimary);
+}
+#dark footer .inline a {
+  color: var(--brand);
+}
+
+footer .smallText {
+  font-size: 0.8rem;
+}
+/* CARD CSS */
+.card {
+  position: absolute;
+  z-index: 2;
+  top: 8rem;
+  left: 11rem;
+  width: 75%;
+  padding: 1rem;
+  height: 65vh;
+}
+#light .card {
+  background-color: var(--brand);
+}
+#dark .card {
+  background-color: #353535;
+  color: var(--brand);
+}
+.card h1 {
+  margin-top: 1rem;
+}
+.card h2 {
+  margin-top: 1.5rem;
+}
+
+#light .card .subHeading, #light .card p {
+  color: #353535e9;
+}
+
+#dark .card .subHeading, #dark .card p {
+  color: #c9c1aeca;
+}
+
+/* CARD TABLE CSS */
+.card table  {
+  row-gap: 3rem;
+}
+.card table tr td:hover {
+  text-decoration: underline;
+}
+/* HOME PAGE */
+.title {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 14rem;
+  font-weight: 800;
+}
+#light .title, #light .sub-description {
+  color: var(--black)
+}
+#dark .title, #dark .sub-description {
+  color: var(--brand);
+}
+.sub-description {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+/* PROJECTS PAGE */
+.projectSection {
+  overflow-y: scroll !important;
+  height: 45vh;
+  display: inline-block;
+  padding: 0.5rem;
+}
+.projectSection .row {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+.projectSection .projectCard {
+  width: 50%;
+  padding: 1rem;
+}
+#light .projectSection .projectCard {
+  background-color: var(--primary);
+  border: var(--black) 2px solid;
+}
+#dark .projectSection .projectCard {
+  background-color: var(--black);
+  border: var(--brand) 2px solid;
+}
+.projectSection .projectCard img {
+  max-width: 100%;
+}
+.projectSection .projectCard .cardTitle {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 1rem 0rem 0.5rem;
+}
+
+.projectSection .projectCard .cardTitle a {
+  color: var(--primary-green);
+}
+
+.projectSection .projectCard span .tag {
+  font-size: 1.3rem;
+}
+.projectSection .projectCard span p {
+ display: inline;
+ margin: 1rem;
+}
+.projectSection .projectCard span p span:hover {
+  text-decoration: underline;
+}
+.projectSection .projectCard .cardDescription {
+  margin: 1rem 0rem;
+}
+.projectSection .projectCard .cardDescription a {
+  text-decoration: none;
+}
+#light .projectSection .projectCard .cardDescription a {
+  color: var(--darkPrimary);
+}
+
+#dark .projectSection .projectCard .cardDescription a {
+  color: var(--primary);
+}
+.projectSection .projectCard .cardDescription button {
+  background: #ffffff00;
+  border: none;
+  font-family: var(--main);
+  font-size: 1.1rem;
+  margin: 0rem 0.5rem;
+  padding-top: 0.1rem;
+  font-weight: 600;
+}
+.projectSection .projectCard .cardDescription button:hover, .projectSection .projectCard .cardDescription a:hover {
+  text-decoration: underline;
+}
+
+#light .projectSection .projectCard .cardDescription button {
+  color: var(--black);
+} 
+
+#dark .projectSection .projectCard .cardDescription button{
+  color: var(--brand);
+}
+/* CUSTOMISED SCROLL BAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+#light ::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+#dark ::-webkit-scrollbar-thumb {
+  background: var(--brand);
+}
