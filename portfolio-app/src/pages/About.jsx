@@ -24,7 +24,7 @@ const About = ({ theme }) => {
                 <td>SQL</td>
               </tr>
               <tr>
-                <td>UX/UI Design and Development</td>
+                <td>UX/UI</td>
                 <td>WordPress</td>
                 <td>Adobe Suite</td>
               </tr>
